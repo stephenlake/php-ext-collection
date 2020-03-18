@@ -1,6 +1,6 @@
-PHP_ARG_ENABLE(indexed, whether to enable indexed support,
-[  --enable-indexed           Enable indexed support])
+PHP_ARG_ENABLE(collection, whether to enable collection support,
+[  --enable-collection           Enable collection support])
 
-if test "$PHP_INDEXED" != "no"; then
-  PHP_NEW_EXTENSION(indexed, indexed.c object.c iterator.c, $ext_shared,, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1)
+if test "$PHP_COLLECTION" != "no"; then
+  PHP_NEW_EXTENSION(collection, collection.c object.c iterator.c, $ext_shared,, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1)
 fi
